@@ -1,0 +1,16 @@
+body {
+    background-color: black;
+    background-repeat: no-repeat;
+    color: rgb(214, 145, 55);
+}
+
+@media (max-width: 700px) {
+    body {
+        color: brown;
+        background-color: darkblue;
+    }
+}
+
+@import "components/header.css";
+@import "components/footer.css";
+

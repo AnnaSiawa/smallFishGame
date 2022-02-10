@@ -1,0 +1,19 @@
+$base-font-size: 32px;
+
+$color-white: rgba(255, 255, 255, 1);
+
+/*Width breakpoints*/
+$breakpoint-fullhd: 1860px;
+$breakpoint-desktop-L: 1620px;
+$breakpoint-desktop-S: 1260px;
+$breakpoint-tablet-L: 1100px;
+$breakpoint-tablet-M: 991px;
+$breakpoint-tablet-S: 768px;
+$breakpoint-mobile-L: 480px;
+$breakpoint-mobile-S: 360px;
+
+/*fonts*/
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-BriosoPro: "BriosoPro", $font-family-sans-serif;
+$primaryFont: $font-BriosoPro;
