@@ -26,12 +26,16 @@ module.exports = {
             favicons: true,
             appleIcons: true,
             android: true,
-            window: true,
+            windows: true,
             yandex: false,
             coast: false,
             firefox: false,
-            appleStartup: false
+            appleStartup: false,
+            safari: true
         },
-        path: "/"
+        path: "./",
+        appName: 'My App',
+        appShortName: 'App',
+        appDescription: 'This is my application'
     }
 }
