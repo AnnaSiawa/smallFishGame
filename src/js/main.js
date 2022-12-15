@@ -1,5 +1,6 @@
 Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => {
-    img.onload = img.onerror = resolve;
+    img.addEventListener('load', resolve);
+    img.addEventListener('error', resolve);
 }))).then(() => {
     let buttonStart = document.getElementById("button");
     let butonsGame = document.querySelector('.buttons-wrap');
