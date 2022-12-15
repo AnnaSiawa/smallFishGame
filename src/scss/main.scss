@@ -6,7 +6,14 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+
+  //&:after {
+  //  content: url(../img/fish.png) url(../img/shark.png) url(../img/seaweed.png);
+  //  visibility: hidden;
+  //  opacity: 0;
+  //}
 }
+
 .buttons-wrap {
   position: absolute;
   top: 20%;
@@ -14,6 +21,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
   button {
     &:first-child {
       margin-right: 20px;

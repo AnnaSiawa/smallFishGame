@@ -73,6 +73,7 @@ window.addEventListener("load", function (x) {
     };
 
     let sprites = {};
+    console.log(sprites);
 
     let movePlayer = function () {
         player.isMoving = true;
@@ -92,9 +93,6 @@ window.addEventListener("load", function (x) {
     let load = function () {
         sprites.player = new Image();
         sprites.player.src = '../img/fish.png';
-
-        // sprites.background = new Image();
-        // sprites.background.src = '../img/floor.png';
 
         sprites.enemies = new Image();
         sprites.enemies.src = '../img/shark.png';
@@ -141,33 +139,20 @@ window.addEventListener("load", function (x) {
     };
 
     //показать обьекты на экране.
-    let draw = function () {
+    let draw = load.onload = function () {
         //чистим холст
         ctx.clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
 
-        //background
-        // ctx.drawImage(sprites.background, 0, 0);
-
         //объект игрок
         ctx.drawImage(sprites.player, player.x, player.y);
-        // ctx.fillStyle = "#00FF00";
-        // ctx.fillRect(player.x, player.y, player.w, player.h);
 
         //объекты враги
-        // ctx.fillStyle = "#3333FF";
         enemies.forEach(function (element, index) {
-            // ctx.translate(50, 50);
-            // ctx.rotate(-this.angle + Math.PI/2.0);
             ctx.drawImage(sprites.enemies, element.x, element.y);
-            // ctx.rotate(this.angle - Math.PI/2.0);
-            // // ctx.fillRect(element.x, element.y, element.w, element.h);
-            // ctx.translate(-50, -50);
         });
 
         //финиш
         ctx.drawImage(sprites.goal, goal.x, goal.y);
-        // ctx.fillStyle = "rgb(128,128,0)";
-        // ctx.fillRect(goal.x, goal.y, goal.w, goal.h);
     };
 
     //инициализируем несколько раз в секунду
